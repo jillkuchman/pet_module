@@ -1,0 +1,21 @@
+<?php
+
+function pet_menu()
+{
+    $items = array();
+    $items['pet'] = array(
+        'title' => "Chica!",
+        'page callback' => 'pets_display',
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+    );
+    return $items;
+}
+
+function pets_display() {
+    return '
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/wdLVLPoRXR4" frameborder="0" allowfullscreen></iframe>
+    <img src="sites/all/modules/images/pug.jpeg">
+    <p><a href="http://www.jennythepug.com/JennyThePug/Welcome.html">Chica is a rockstar.</a></p>
+    <p>Read more about the pugs <a href="http://en.wikipedia.org/wiki/Pug">here</a>.</p>';
+}
